@@ -30,3 +30,13 @@ public class PessoaService {
         pessoaRepository.deleteById(id);
     }
 }
+
+//public Pessoa criarPessoa(Pessoa pessoa){
+//    try{
+//        Pessoas pessoasResult = pessoaRepository.save(pessoa);
+//        return pessoasResult;
+//    } catch (Exception e){
+//        throw new RuntimeException(e.getMessage());
+//    }
+//    return null;
+//}
