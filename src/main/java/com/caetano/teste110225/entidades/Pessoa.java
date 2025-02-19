@@ -1,30 +1,30 @@
 package com.caetano.teste110225.entidades;
-import jakarta.persistence.*;
-@Entity
 
+import jakarta.persistence.*;
+
+@Entity
 public class Pessoa {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
     private String nome;
-
-    @Column
     private String sobrenome;
+    private int idade;
+    private String altura;
 
-    @Column(nullable = false)
-    private Integer idade;
+    public Pessoa() {}
 
-    @Column
-    private Integer altura;
+    public Pessoa(String nome, String sobrenome, int idade, String altura) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.idade = idade;
+        this.altura = altura;
+    }
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getNome() {
@@ -43,19 +43,19 @@ public class Pessoa {
         this.sobrenome = sobrenome;
     }
 
-    public Integer getIdade() {
+    public int getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
 
-    public Integer getAltura() {
+    public String getAltura() {
         return altura;
     }
 
-    public void setAltura(Integer altura) {
+    public void setAltura(String altura) {
         this.altura = altura;
     }
 }
