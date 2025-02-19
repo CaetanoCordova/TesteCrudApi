@@ -12,21 +12,21 @@ import java.util.Optional;
 public class PessoaService {
 
     @Autowired
-    private static PessoaRepository pessoaRepository;
+    private PessoaRepository pessoaRepository;
 
     public List<Pessoa> listarTodos() {
         return pessoaRepository.findAll();
     }
 
-    public static Optional<Pessoa> findById(Long id) {
+    public Optional<Pessoa> buscarPorId(Long id) {
         return pessoaRepository.findById(id);
     }
 
-    public static Pessoa save(Pessoa pessoa) {
+    public Pessoa salvar(Pessoa pessoa) {
         return pessoaRepository.save(pessoa);
     }
 
-    public static void delete(Long id) {
+    public void excluir(Long id) {
         pessoaRepository.deleteById(id);
     }
 }
